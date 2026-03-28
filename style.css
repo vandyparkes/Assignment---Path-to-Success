@@ -1,25 +1,556 @@
-Fonts
-Add to your CSS Under Imported Fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
-H1, H2
-Kavoon
-All other text
-Inter
-H1
-3em
-NAV H2
-1.5em
-H2
-2em
-H3
-1.5em
-H4
-1.15em
-Colors
-Teal :#4CA7C0
-Purple: #484FB7
-Lavender: #6B8FE7
-Yellow: #E9BB57; 
-Pink:#D9526F;
-Dark-gray:#1E1E1E; 
-White:#ffffff; 
+/* CSS BY Vandy Parkes */
+
+/* IMPORTED FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap");
+
+/* CSS RESET (use this RESET: https://meyerweb.com/eric/tools/css/reset/) */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ROOT VARIABLES */
+:root {
+  --color-primary: #4a54b3;
+  --color-primary-dark: #3f48a1;
+  --color-gold: #f9d371;
+  --color-red-pink: #e85d75;
+  --color-teal: #4db6ac;
+  --color-light-blue: #64b5f6;
+  --color-light-pink: #fce4ec;
+  --color-white: #ffffff;
+  --color-text-dark: #1e1e1e;
+  --color-nav-link: #484fb7;
+  --font-heading: "Kavoon", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --radius-card: 12px;
+  --section-padding-y: 2rem;
+  --section-padding-x: 1.25rem;
+  --max-content: 400px;
+}
+
+/* GLOBAL STYLES (mobile first/small) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text-dark);
+  background-color: var(--color-primary-dark);
+  max-width: var(--max-content);
+  margin: 0 auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  background: var(--color-white);
+  color: var(--color-text-dark);
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.1;
+}
+
+header h2.menu-title,
+nav h2 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* —— Header hero —— */
+header > section {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--section-padding-y) var(--section-padding-x)
+    calc(var(--section-padding-y) * 1.25);
+}
+
+header h1 {
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+header hgroup p {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  line-height: 1.4;
+}
+
+/* —— Menu (gold band) —— */
+header nav {
+  background-color: var(--color-gold);
+  padding: var(--section-padding-y) var(--section-padding-x);
+  text-align: center;
+}
+
+header nav .menu-title {
+  color: var(--color-text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+header nav a {
+  display: block;
+  background-color: var(--color-white);
+  color: var(--color-nav-link);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-card);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+  filter: brightness(0.97);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* —— Main: Our Services —— */
+#our-services {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--section-padding-y) var(--section-padding-x);
+  text-align: center;
+}
+
+#our-services > h2 {
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+
+#our-services > section {
+  margin-bottom: 2rem;
+}
+
+#our-services > section:last-child {
+  margin-bottom: 0;
+}
+
+#our-services h3 {
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-list article {
+  background-color: var(--color-white);
+  color: var(--color-text-dark);
+  border-radius: var(--radius-card);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.service-list article img {
+  order: -1;
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.service-list h4 {
+  color: var(--color-primary-dark);
+  font-family: var(--font-body);
+}
+
+.service-list p {
+  font-size: 0.875rem;
+  color: #444;
+  line-height: 1.5;
+  max-width: 32ch;
+  margin: 0 auto;
+}
+
+/* —— Why Choose Us —— */
+#why-choose-us {
+  background-color: var(--color-red-pink);
+  padding: var(--section-padding-y) var(--section-padding-x);
+  text-align: center;
+}
+
+#why-choose-us h2 {
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+}
+
+#why-choose-us > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+#why-choose-us > ul > li {
+  border-radius: var(--radius-card);
+  padding: 1.25rem 0.75rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  color: var(--color-text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#why-choose-us > ul > li:nth-child(1) {
+  background-color: var(--color-teal);
+}
+
+#why-choose-us > ul > li:nth-child(2) {
+  background-color: var(--color-light-blue);
+}
+
+#why-choose-us > ul > li:nth-child(3) {
+  background-color: var(--color-gold);
+}
+
+#why-choose-us > ul > li:nth-child(4) {
+  background-color: var(--color-light-pink);
+}
+
+/* —— Pricing —— */
+#pricing {
+  background-color: var(--color-primary-dark);
+  padding: var(--section-padding-y) var(--section-padding-x);
+  text-align: center;
+}
+
+#pricing > h2 {
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+
+.pricing-block {
+  margin-bottom: 1.75rem;
+}
+
+.pricing-block:last-child {
+  margin-bottom: 0;
+}
+
+.pricing-block h3 {
+  color: var(--color-gold);
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  margin-bottom: 0.65rem;
+  text-align: center;
+}
+
+.pricing-block table {
+  width: 100%;
+  font-size: 0.8rem;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pricing-block thead th {
+  background-color: var(--color-gold);
+  color: var(--color-text-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.65rem 0.5rem;
+  border-bottom: 1px solid #c9a860;
+}
+
+.pricing-block tbody td {
+  background-color: var(--color-white);
+  color: var(--color-text-dark);
+  padding: 0.65rem 0.5rem;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.pricing-block tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* —— CTA —— */
+#take-the-first-step {
+  background-color: var(--color-red-pink);
+  padding: var(--section-padding-y) var(--section-padding-x)
+    calc(var(--section-padding-y) * 1.25);
+  text-align: center;
+}
+
+#take-the-first-step h2 {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+#take-the-first-step #contact {
+  color: var(--color-white);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  max-width: 34ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#take-the-first-step p:last-of-type {
+  margin: 0;
+}
+
+#take-the-first-step a {
+  display: inline-block;
+  background-color: var(--color-white);
+  color: var(--color-text-dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-card);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+#take-the-first-step a:hover,
+#take-the-first-step a:focus-visible {
+  filter: brightness(0.98);
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+/* —— Footer —— */
+footer {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  padding: 1.25rem var(--section-padding-x) 1.75rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+footer small {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+footer nav a {
+  color: var(--color-white);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+footer nav a:hover,
+footer nav a:focus-visible {
+  opacity: 0.9;
+}

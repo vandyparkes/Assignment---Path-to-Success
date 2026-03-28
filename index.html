@@ -4,31 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Path to Success</title>
-  <style>
-    .skip-link {
-      position: absolute;
-      left: -10000px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-    .skip-link:focus {
-      left: 1rem;
-      top: 1rem;
-      width: auto;
-      height: auto;
-      overflow: visible;
-      z-index: 1000;
-      padding: 0.5rem 1rem;
-      background: #fff;
-    }
-    .service-list {
-      list-style: none;
-      margin: 0;
-      padding-left: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -37,15 +13,16 @@
     <section aria-labelledby="site-heading">
       <hgroup>
         <h1 id="site-heading">Path to Success</h1>
-        <p>Unlock your full potential with personalized life coaching</p>
+        <p>Unlock your potential</p>
       </hgroup>
     </section>
     <nav aria-label="Primary navigation">
+      <h2 class="menu-title">Menu</h2>
       <ul>
-        <li><a href="#our-services">Our Services</a></li>
-        <li><a href="#why-choose-us">Why Choose Us</a></li>
-        <li><a href="#pricing">Prices</a></li>
-        <li><a href="#take-the-first-step">Take the First Step</a></li>
+        <li><a href="#site-heading">Who we are</a></li>
+        <li><a href="#our-services">What we offer</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#take-the-first-step">Take the first step</a></li>
       </ul>
     </nav>
   </header>
@@ -144,18 +121,96 @@
 
     <section id="pricing" aria-labelledby="pricing-heading">
       <h2 id="pricing-heading">Pricing</h2>
-      <ul>
-        <li>One-on-One Coaching</li>
-        <li>Group Coaching</li>
-        <li>Workshops &amp; Seminars</li>
-        <li>Online Courses</li>
-      </ul>
+
+      <div class="pricing-block">
+        <h3>One-on-One Coaching</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Service</th>
+              <th scope="col">Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Personal Development</td>
+              <td>$120 / session</td>
+            </tr>
+            <tr>
+              <td>Career Coaching</td>
+              <td>$120 / session</td>
+            </tr>
+            <tr>
+              <td>Relationship Coaching</td>
+              <td>$120 / session</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pricing-block">
+        <h3>Group Coaching</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Service</th>
+              <th scope="col">Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Supportive Community</td>
+              <td>$45 / session</td>
+            </tr>
+            <tr>
+              <td>Focused Sessions</td>
+              <td>$45 / session</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pricing-block">
+        <h3>Workshops &amp; Seminars</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Service</th>
+              <th scope="col">Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Interactive Learning</td>
+              <td>$75 / workshop</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pricing-block">
+        <h3>Online Courses</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Service</th>
+              <th scope="col">Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Flexible Learning</td>
+              <td>$199 / course</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section id="take-the-first-step" aria-labelledby="cta-heading">
       <h2 id="cta-heading">Take the First Step Today</h2>
       <p id="contact">Your journey to a more fulfilling life begins with a single step. Book a free 30-minute consultation today to discover how our coaching services can help you achieve your goals. Let's work together to create the life you've always dreamed of!</p>
-      <p><a href="#contact">Schedule Now</a></p>
+      <p><a href="#contact">Schedule now</a></p>
     </section>
   </main>
 
